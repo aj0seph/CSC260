@@ -1,0 +1,14 @@
+C:\Users\Ash\Documents\CSC260\WeatherProj\WeatherProject\bin\Debug\WeatherProject.exe.config
+C:\Users\Ash\Documents\CSC260\WeatherProj\WeatherProject\bin\Debug\WeatherProject.exe
+C:\Users\Ash\Documents\CSC260\WeatherProj\WeatherProject\bin\Debug\WeatherProject.pdb
+C:\Users\Ash\Documents\CSC260\WeatherProj\WeatherProject\obj\Debug\WeatherProject.csproj.AssemblyReference.cache
+C:\Users\Ash\Documents\CSC260\WeatherProj\WeatherProject\obj\Debug\WeatherProject.csproj.SuggestedBindingRedirects.cache
+C:\Users\Ash\Documents\CSC260\WeatherProj\WeatherProject\obj\Debug\WeatherProject.Form1.resources
+C:\Users\Ash\Documents\CSC260\WeatherProj\WeatherProject\obj\Debug\WeatherProject.Properties.Resources.resources
+C:\Users\Ash\Documents\CSC260\WeatherProj\WeatherProject\obj\Debug\WeatherProject.csproj.GenerateResource.cache
+C:\Users\Ash\Documents\CSC260\WeatherProj\WeatherProject\obj\Debug\WeatherProject.csproj.CoreCompileInputs.cache
+C:\Users\Ash\Documents\CSC260\WeatherProj\WeatherProject\obj\Debug\WeatherProject.exe
+C:\Users\Ash\Documents\CSC260\WeatherProj\WeatherProject\obj\Debug\WeatherProject.pdb
+C:\Users\Ash\Documents\CSC260\WeatherProj\WeatherProject\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ash\Documents\CSC260\WeatherProj\WeatherProject\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ash\Documents\CSC260\WeatherProj\WeatherProject\obj\Debug\WeatherProject.csproj.CopyComplete
