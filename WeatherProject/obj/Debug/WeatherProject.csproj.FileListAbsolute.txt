@@ -1,0 +1,11 @@
+C:\Users\Ash\Source\Repos\aj0seph\CSC260\WeatherProject\bin\Debug\WeatherProject.exe.config
+C:\Users\Ash\Source\Repos\aj0seph\CSC260\WeatherProject\bin\Debug\WeatherProject.exe
+C:\Users\Ash\Source\Repos\aj0seph\CSC260\WeatherProject\bin\Debug\WeatherProject.pdb
+C:\Users\Ash\Source\Repos\aj0seph\CSC260\WeatherProject\obj\Debug\WeatherProject.csproj.AssemblyReference.cache
+C:\Users\Ash\Source\Repos\aj0seph\CSC260\WeatherProject\obj\Debug\WeatherProject.csproj.SuggestedBindingRedirects.cache
+C:\Users\Ash\Source\Repos\aj0seph\CSC260\WeatherProject\obj\Debug\WeatherProject.Form1.resources
+C:\Users\Ash\Source\Repos\aj0seph\CSC260\WeatherProject\obj\Debug\WeatherProject.Properties.Resources.resources
+C:\Users\Ash\Source\Repos\aj0seph\CSC260\WeatherProject\obj\Debug\WeatherProject.csproj.GenerateResource.cache
+C:\Users\Ash\Source\Repos\aj0seph\CSC260\WeatherProject\obj\Debug\WeatherProject.csproj.CoreCompileInputs.cache
+C:\Users\Ash\Source\Repos\aj0seph\CSC260\WeatherProject\obj\Debug\WeatherProject.exe
+C:\Users\Ash\Source\Repos\aj0seph\CSC260\WeatherProject\obj\Debug\WeatherProject.pdb
