@@ -30,6 +30,7 @@ namespace WeatherProject
             string httpResult = getStringFromUrl(client, "https://api.weatherbit.io/v2.0/current?lat=35.7796&lon=-78.6382&key=38369a3a213f4172a8d26a15284ddbc1&include=minutely");
             WeatherApi.container convertedResult = JsonConvert.DeserializeObject<WeatherApi.container>(httpResult);
             
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

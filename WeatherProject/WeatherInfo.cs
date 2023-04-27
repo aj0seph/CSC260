@@ -7,17 +7,35 @@ using System.Net.Http;
 
 namespace WeatherProject
 {
-    internal class WeatherApi
+    internal class WeatherInfo
     {
-        //public class 
-        /*
-        public class WeatherInfo
+        public class coord 
         {
-            public float app_temp { get; set; }
-        }
-        */
-
+            public double lat { get; set; }
+            public double lon { get; set; }
         
+        }
+
+        public class weather 
+        {
+            public string main { get; set; }
+
+            public string description { get; set; }
+            
+            public string icon { get; set; }
+            public string icon { get; set; }
+        
+        
+        }
+
+        public class main 
+        { 
+            public double temp { get; set; }
+            public double pressure { get; set; }
+        
+        
+        }
+        /*
         public class WeatherInfo 
         {
             public float app_temp { get; set;}
@@ -64,5 +82,5 @@ namespace WeatherProject
             //public List <weather> weather { get; set;} 
         }
 
-    }
+    }*/
 }
