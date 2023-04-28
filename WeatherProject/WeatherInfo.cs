@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WeatherProject
 {
-    internal class WeatherInfo
+    public class WeatherInfo
     {
 
         public class coord 

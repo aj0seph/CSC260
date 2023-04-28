@@ -17,8 +17,18 @@ namespace WeatherProject
         public Form1()
         {
             InitializeComponent();
+            UpdateButtons = new List<WeatherDisplayButton>();
         }
+        
         string APIKey = "3ca07f675106a4fe2253d8f853feb77a";
+        private List<WeatherDisplayButton> UpdateButtons;
+
+        public void AddNewButton(WeatherDisplayButton button) 
+        {
+            //this = new Object();
+            UpdateButtons.Add(button);
+        
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {

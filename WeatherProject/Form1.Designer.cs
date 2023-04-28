@@ -44,6 +44,7 @@
             this.SunriseResponse = new System.Windows.Forms.Button();
             this.WindSpeedResponse = new System.Windows.Forms.Button();
             this.PressureResponse = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.WeatherIcon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,13 +70,16 @@
             this.TxtCityState.Name = "TxtCityState";
             this.TxtCityState.Size = new System.Drawing.Size(455, 38);
             this.TxtCityState.TabIndex = 1;
+            this.TxtCityState.Text = "sdfsdf";
             // 
             // WeatherIcon
             // 
             this.WeatherIcon.BackColor = System.Drawing.Color.Transparent;
-            this.WeatherIcon.Location = new System.Drawing.Point(172, 85);
+            this.WeatherIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.WeatherIcon.Location = new System.Drawing.Point(188, 85);
             this.WeatherIcon.Name = "WeatherIcon";
-            this.WeatherIcon.Size = new System.Drawing.Size(358, 155);
+            this.WeatherIcon.Size = new System.Drawing.Size(274, 160);
+            this.WeatherIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.WeatherIcon.TabIndex = 5;
             this.WeatherIcon.TabStop = false;
             // 
@@ -259,12 +263,28 @@
             this.PressureResponse.Text = "N/A";
             this.PressureResponse.UseVisualStyleBackColor = false;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(589, 129);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(90, 38);
+            this.button3.TabIndex = 18;
+            this.button3.Text = "N/A";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.PressureResponse);
             this.Controls.Add(this.WindSpeedResponse);
             this.Controls.Add(this.SunriseResponse);
@@ -305,6 +325,7 @@
         private System.Windows.Forms.Button SunriseResponse;
         private System.Windows.Forms.Button WindSpeedResponse;
         private System.Windows.Forms.Button PressureResponse;
+        private System.Windows.Forms.Button button3;
     }
 }
 
