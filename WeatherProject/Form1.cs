@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using System.Net;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WeatherProject
 {
@@ -42,18 +43,37 @@ namespace WeatherProject
                 var json = web.DownloadString(url);
                 WeatherInfo.root Info = JsonConvert.DeserializeObject<WeatherInfo.root>(json);
                 WeatherIcon.ImageLocation = "https://api.openweathermap.org/img/w/" + Info.weather[0].icon + ".png";
-                TxtCondition.Text = Info.weather[0].main;
-                TxtDetails.Text = Info.weather[0].description;
+                ConditionResponse.Text = Info.weather[0].main;
+                DetailsResponse.Text = Info.weather[0].description;
                 SunriseResponse.Text = Info.sys.sunrise.ToString();
                 SunsetResponse.Text = Info.sys.sunset.ToString();
                 WindSpeedResponse.Text = Info.wind.speed.ToString();
                 PressureResponse.Text = Info.main.pressure.ToString();
+                //Currently in Kelvin, change to Fahrenheit
+                double kelvinTemp = Info.main.temp;
+                double fahrenheitTemp = (kelvinTemp - 273.15) * 1.8 + 32;
+                TempResponse.Text = fahrenheitTemp.ToString();
 
             }
 
 
 
+
+
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtCityState_TextChanged(object sender, EventArgs e)
+        {
+                if (TxtCityState.Text == "Enter your city or state here...")
+                {
+                TxtCityState.Text = "";
+                }
+            }
+        }
     }
-}
+

@@ -29,7 +29,7 @@ namespace WeatherProject
             //client.getStringFromUrl("https://api.weatherbit.io/v2.0/current?lat=35.7796&lon=-78.6382&key=38369a3a213f4172a8d26a15284ddbc1&include=minutely");
             string httpResult = getStringFromUrl(client, "https://api.weatherbit.io/v2.0/current?lat=35.7796&lon=-78.6382&key=38369a3a213f4172a8d26a15284ddbc1&include=minutely");
             WeatherInfo.root convertedResult = JsonConvert.DeserializeObject<WeatherInfo.root>(httpResult);
-            
+
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

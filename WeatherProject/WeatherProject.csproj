@@ -60,6 +60,9 @@
     <Compile Include="SunriseDisplayButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="SunsetDisplayButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="WeatherDisplayButton.cs">
       <SubType>Component</SubType>
     </Compile>
