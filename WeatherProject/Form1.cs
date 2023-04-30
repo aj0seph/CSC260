@@ -55,11 +55,6 @@ namespace WeatherProject
                 TempResponse.Text = fahrenheitTemp.ToString();
 
             }
-
-
-
-
-
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -67,13 +62,21 @@ namespace WeatherProject
 
         }
 
+        
+
         private void TxtCityState_TextChanged(object sender, EventArgs e)
-        {
+        {       //trying to achieve that greyed text in search-box?
                 if (TxtCityState.Text == "Enter your city or state here...")
                 {
                 TxtCityState.Text = "";
                 }
             }
+
+        //Gives us just the day of the week
+        private void Date_Click(object sender, EventArgs e)
+        {
+            Date.Text = DateTime.Now.ToString("dddd");
         }
+    }
     }
 

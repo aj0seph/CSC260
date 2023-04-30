@@ -32,7 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.TxtCityState = new System.Windows.Forms.TextBox();
             this.WeatherIcon = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Date = new System.Windows.Forms.Button();
             this.TxtDetails = new System.Windows.Forms.Button();
             this.TxtCondition = new System.Windows.Forms.Button();
             this.sunrise = new System.Windows.Forms.Button();
@@ -50,7 +50,21 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.WeatherIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -59,7 +73,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.Location = new System.Drawing.Point(579, 21);
+            this.button1.Location = new System.Drawing.Point(598, 21);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(162, 38);
             this.button1.TabIndex = 0;
@@ -70,7 +84,7 @@
             // TxtCityState
             // 
             this.TxtCityState.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxtCityState.Location = new System.Drawing.Point(105, 21);
+            this.TxtCityState.Location = new System.Drawing.Point(116, 21);
             this.TxtCityState.Multiline = true;
             this.TxtCityState.Name = "TxtCityState";
             this.TxtCityState.Size = new System.Drawing.Size(455, 38);
@@ -81,27 +95,28 @@
             // 
             this.WeatherIcon.BackColor = System.Drawing.Color.Transparent;
             this.WeatherIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.WeatherIcon.Location = new System.Drawing.Point(221, 85);
+            this.WeatherIcon.Location = new System.Drawing.Point(210, 104);
             this.WeatherIcon.Name = "WeatherIcon";
             this.WeatherIcon.Size = new System.Drawing.Size(295, 138);
             this.WeatherIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.WeatherIcon.TabIndex = 5;
             this.WeatherIcon.TabStop = false;
             // 
-            // button2
+            // Date
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(28, 85);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(162, 38);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "City/State:";
-            this.button2.UseVisualStyleBackColor = false;
+            this.Date.BackColor = System.Drawing.Color.Transparent;
+            this.Date.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Date.FlatAppearance.BorderSize = 0;
+            this.Date.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date.ForeColor = System.Drawing.Color.Indigo;
+            this.Date.Location = new System.Drawing.Point(268, 60);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(162, 38);
+            this.Date.TabIndex = 6;
+            this.Date.Text = "N/A";
+            this.Date.UseVisualStyleBackColor = false;
+            this.Date.Click += new System.EventHandler(this.Date_Click);
             // 
             // TxtDetails
             // 
@@ -221,9 +236,9 @@
             this.SunsetResponse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SunsetResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SunsetResponse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.SunsetResponse.Location = new System.Drawing.Point(638, 323);
+            this.SunsetResponse.Location = new System.Drawing.Point(638, 327);
             this.SunsetResponse.Name = "SunsetResponse";
-            this.SunsetResponse.Size = new System.Drawing.Size(90, 38);
+            this.SunsetResponse.Size = new System.Drawing.Size(122, 38);
             this.SunsetResponse.TabIndex = 14;
             this.SunsetResponse.Text = "N/A";
             this.SunsetResponse.UseVisualStyleBackColor = false;
@@ -236,9 +251,9 @@
             this.SunriseResponse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SunriseResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SunriseResponse.ForeColor = System.Drawing.Color.Yellow;
-            this.SunriseResponse.Location = new System.Drawing.Point(449, 323);
+            this.SunriseResponse.Location = new System.Drawing.Point(436, 326);
             this.SunriseResponse.Name = "SunriseResponse";
-            this.SunriseResponse.Size = new System.Drawing.Size(90, 38);
+            this.SunriseResponse.Size = new System.Drawing.Size(102, 38);
             this.SunriseResponse.TabIndex = 15;
             this.SunriseResponse.Text = "N/A";
             this.SunriseResponse.UseVisualStyleBackColor = false;
@@ -354,15 +369,92 @@
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.HotPink;
-            this.button5.Location = new System.Drawing.Point(660, 113);
+            this.button5.Location = new System.Drawing.Point(655, 117);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(43, 48);
+            this.button5.Size = new System.Drawing.Size(34, 40);
             this.button5.TabIndex = 23;
             this.button5.Text = "o";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(448, 280);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(81, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(638, 280);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(122, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 25;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(686, 143);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 26;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(40, 280);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 27;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(237, 280);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(90, 50);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 28;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(16, 399);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(50, 37);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 29;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(448, 399);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(56, 38);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 30;
+            this.pictureBox7.TabStop = false;
             // 
             // Form1
             // 
@@ -370,6 +462,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -387,13 +486,20 @@
             this.Controls.Add(this.sunrise);
             this.Controls.Add(this.TxtCondition);
             this.Controls.Add(this.TxtDetails);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Date);
             this.Controls.Add(this.WeatherIcon);
             this.Controls.Add(this.TxtCityState);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Weather App";
             ((System.ComponentModel.ISupportInitialize)(this.WeatherIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,7 +510,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox TxtCityState;
         private System.Windows.Forms.PictureBox WeatherIcon;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Date;
         private System.Windows.Forms.Button TxtDetails;
         private System.Windows.Forms.Button TxtCondition;
         private System.Windows.Forms.Button sunrise;
@@ -422,6 +528,13 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }
 
