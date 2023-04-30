@@ -7,19 +7,17 @@ using Newtonsoft.Json;
 
 namespace WeatherProject
 {
-    public abstract class WeatherDisplayButton : System.Windows.Forms.Button
+    public class WeatherDisplayButton : System.Windows.Forms.Button
     {
-
-        public WeatherDisplayButton(Form1 parent) 
+        public WeatherDisplayButton()
         {
-            
-            parent.AddNewButton(this);  
-        
         }
 
-        public abstract string GetDisplayText(WeatherInfo.root jsonObject);
-
-
-
+        public void Initialize(Form1 parent) 
+        {
+            
+            //do nothing
+        
+        }
     }
 }

@@ -6,17 +6,14 @@ using System.Threading.Tasks;
 
 namespace WeatherProject
 {
-    internal class SunsetDisplayButton : WeatherDisplayButton
+    internal class SunsetDisplayButton : WeatherDisplayButton, WeatherDisplayInterface
     {
     
-        public SunsetDisplayButton(Form1 parent)
-            : base(parent)
-        {
-        }
+     
 
-        public override string GetDisplayText(WeatherInfo.root jsonObject)
+        public void GetDisplayText(WeatherInfo.root jsonObject)
         {
-            return jsonObject.sys.sunset.ToString();
+           this.Text = Form1.convertDateTime(jsonObject.sys.sunset).ToString("hh:mm:tt");
         }
     }
-}
+    }

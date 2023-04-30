@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace WeatherProject
 {
-    internal class PressureDisplayButtoncs
+    public interface WeatherDisplayInterface
     {
+        void GetDisplayText(WeatherInfo.root jsonObject);
     }
 }

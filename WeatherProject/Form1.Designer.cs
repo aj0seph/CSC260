@@ -40,13 +40,6 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.TxtTemp = new System.Windows.Forms.Button();
-            this.SunsetResponse = new System.Windows.Forms.Button();
-            this.SunriseResponse = new System.Windows.Forms.Button();
-            this.WindSpeedResponse = new System.Windows.Forms.Button();
-            this.PressureResponse = new System.Windows.Forms.Button();
-            this.TempResponse = new System.Windows.Forms.Button();
-            this.ConditionResponse = new System.Windows.Forms.Button();
-            this.DetailsResponse = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -57,6 +50,13 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.DetailsResponse = new WeatherProject.DetailsDisplayButton();
+            this.ConditionResponse = new WeatherProject.ConditionDisplayButton();
+            this.TempResponse = new WeatherProject.TemperatureDisplayButton();
+            this.PressureResponse = new WeatherProject.PressureDisplayButton();
+            this.WindSpeedResponse = new WeatherProject.WindSpeedButton();
+            this.SunriseResponse = new WeatherProject.SunriseDisplayButton();
+            this.SunsetResponse = new WeatherProject.SunsetDisplayButton();
             ((System.ComponentModel.ISupportInitialize)(this.WeatherIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -83,12 +83,323 @@
             // 
             // TxtCityState
             // 
+            this.TxtCityState.AutoCompleteCustomSource.AddRange(new string[] {
+            "    Alabama",
+            "    Alaska",
+            "    Arizona",
+            "    Arkansas",
+            "    California",
+            "    Colorado",
+            "    Connecticut",
+            "    Delaware",
+            "    Florida",
+            "    Georgia",
+            "    Hawaii",
+            "    Idaho",
+            "    Illinois",
+            "    Indiana",
+            "    Iowa",
+            "    Kansas",
+            "    Kentucky",
+            "    Louisiana",
+            "    Maine",
+            "    Maryland",
+            "    Massachusetts",
+            "    Michigan",
+            "    Minnesota",
+            "    Mississippi",
+            "    Missouri",
+            "    Montana",
+            "    Nebraska",
+            "    Nevada",
+            "    New Hampshire",
+            "    New Jersey",
+            "    New Mexico",
+            "    New York",
+            "    North Carolina",
+            "    North Dakota",
+            "    Ohio",
+            "    Oklahoma",
+            "    Oregon",
+            "    Pennsylvania",
+            "    Rhode Island",
+            "    South Carolina",
+            "    South Dakota",
+            "    Tennessee",
+            "    Texas",
+            "    Utah",
+            "    Vermont",
+            "    Virginia",
+            "    Washington",
+            "    West Virginia",
+            "    Wisconsin",
+            "    Wyoming",
+            "    Afghanistan",
+            "    Akrotiri",
+            "    Albania",
+            "    Algeria",
+            "    American Samoa",
+            "    Andorra",
+            "    Angola",
+            "    Anguilla",
+            "    Antarctica",
+            "    Antigua and Barbuda",
+            "    Argentina",
+            "    Armenia",
+            "    Aruba",
+            "    Ashmore and Cartier Islands",
+            "    Australia",
+            "    Austria",
+            "    Azerbaijan",
+            "    Bahamas, The",
+            "    Bahrain",
+            "    Bangladesh",
+            "    Barbados",
+            "    Bassas da India",
+            "    Belarus",
+            "    Belgium",
+            "    Belize",
+            "    Benin",
+            "    Bermuda",
+            "    Bhutan",
+            "    Bolivia",
+            "    Bosnia and Herzegovina",
+            "    Botswana",
+            "    Bouvet Island",
+            "    Brazil",
+            "    British Indian Ocean Territory",
+            "    British Virgin Islands",
+            "    Brunei",
+            "    Bulgaria",
+            "    Burkina Faso",
+            "    Burma",
+            "    Burundi",
+            "    Cambodia",
+            "    Cameroon",
+            "    Canada",
+            "    Cape Verde",
+            "    Cayman Islands",
+            "    Central African Republic",
+            "    Chad",
+            "    Chile",
+            "    China",
+            "    Christmas Island",
+            "    Clipperton Island",
+            "    Cocos (Keeling) Islands",
+            "    Colombia",
+            "    Comoros",
+            "    Congo, Democratic Republic of the",
+            "    Congo, Republic of the",
+            "    Cook Islands",
+            "    Coral Sea Islands",
+            "    Costa Rica",
+            "    Cote d\'Ivoire",
+            "    Croatia",
+            "    Cuba",
+            "    Cyprus",
+            "    Czech Republic",
+            "    Denmark",
+            "    Dhekelia",
+            "    Djibouti",
+            "    Dominica",
+            "    Dominican Republic",
+            "    Ecuador",
+            "    Egypt",
+            "    El Salvador",
+            "    Equatorial Guinea",
+            "    Eritrea",
+            "    Estonia",
+            "    Ethiopia",
+            "    Europa Island",
+            "    Falkland Islands (Islas Malvinas)",
+            "    Faroe Islands",
+            "    Fiji",
+            "    Finland",
+            "    France",
+            "    French Guiana",
+            "    French Polynesia",
+            "    French Southern and Antarctic Lands",
+            "    Gabon",
+            "    Gambia, The",
+            "    Gaza Strip",
+            "    Georgia",
+            "    Germany",
+            "    Ghana",
+            "    Gibraltar",
+            "    Glorioso Islands",
+            "    Greece",
+            "    Greenland",
+            "    Grenada",
+            "    Guadeloupe",
+            "    Guam",
+            "    Guatemala",
+            "    Guernsey",
+            "    Guinea",
+            "    Guinea-Bissau",
+            "    Guyana",
+            "    Haiti",
+            "    Heard Island and McDonald Islands",
+            "    Holy See (Vatican City)",
+            "    Honduras",
+            "    Hong Kong",
+            "    Hungary",
+            "    Iceland",
+            "    India",
+            "    Indonesia",
+            "    Iran",
+            "    Iraq",
+            "    Ireland",
+            "    Isle of Man",
+            "    Israel",
+            "    Italy",
+            "    Jamaica",
+            "    Jan Mayen",
+            "    Japan",
+            "    Jersey",
+            "    Jordan",
+            "    Juan de Nova Island",
+            "    Kazakhstan",
+            "    Kenya",
+            "    Kiribati",
+            "    Korea, North",
+            "    Korea, South",
+            "    Kuwait",
+            "    Kyrgyzstan",
+            "    Laos",
+            "    Latvia",
+            "    Lebanon",
+            "    Lesotho",
+            "    Liberia",
+            "    Libya",
+            "    Liechtenstein",
+            "    Lithuania",
+            "    Luxembourg",
+            "    Macau",
+            "    Macedonia",
+            "    Madagascar",
+            "    Malawi",
+            "    Malaysia",
+            "    Maldives",
+            "    Mali",
+            "    Malta",
+            "    Marshall Islands",
+            "    Martinique",
+            "    Mauritania",
+            "    Mauritius",
+            "    Mayotte",
+            "    Mexico",
+            "    Micronesia, Federated States of",
+            "    Moldova",
+            "    Monaco",
+            "    Mongolia",
+            "    Montserrat",
+            "    Morocco",
+            "    Mozambique",
+            "    Namibia",
+            "    Nauru",
+            "    Navassa Island",
+            "    Nepal",
+            "    Netherlands",
+            "    Netherlands Antilles",
+            "    New Caledonia",
+            "    New Zealand",
+            "    Nicaragua",
+            "    Niger",
+            "    Nigeria",
+            "    Niue",
+            "    Norfolk Island",
+            "    Northern Mariana Islands",
+            "    Norway",
+            "    Oman",
+            "    Pakistan",
+            "    Palau",
+            "    Panama",
+            "    Papua New Guinea",
+            "    Paracel Islands",
+            "    Paraguay",
+            "    Peru",
+            "    Philippines",
+            "    Pitcairn Islands",
+            "    Poland",
+            "    Portugal",
+            "    Puerto Rico",
+            "    Qatar",
+            "    Reunion",
+            "    Romania",
+            "    Russia",
+            "    Rwanda",
+            "    Saint Helena",
+            "    Saint Kitts and Nevis",
+            "    Saint Lucia",
+            "    Saint Pierre and Miquelon",
+            "    Saint Vincent and the Grenadines",
+            "    Samoa",
+            "    San Marino",
+            "    Sao Tome and Principe",
+            "    Saudi Arabia",
+            "    Senegal",
+            "    Serbia and Montenegro",
+            "    Seychelles",
+            "    Sierra Leone",
+            "    Singapore",
+            "    Slovakia",
+            "    Slovenia",
+            "    Solomon Islands",
+            "    Somalia",
+            "    South Africa",
+            "    South Georgia and the South Sandwich Islands",
+            "    Spain",
+            "    Spratly Islands",
+            "    Sri Lanka",
+            "    Sudan",
+            "    Suriname",
+            "    Svalbard",
+            "    Swaziland",
+            "    Sweden",
+            "    Switzerland",
+            "    Syria",
+            "    Taiwan",
+            "    Tajikistan",
+            "    Tanzania",
+            "    Thailand",
+            "    Timor-Leste",
+            "    Togo",
+            "    Tokelau",
+            "    Tonga",
+            "    Trinidad and Tobago",
+            "    Tromelin Island",
+            "    Tunisia",
+            "    Turkey",
+            "    Turkmenistan",
+            "    Turks and Caicos Islands",
+            "    Tuvalu",
+            "    Uganda",
+            "    Ukraine",
+            "    United Arab Emirates",
+            "    United Kingdom",
+            "    United States",
+            "    Uruguay",
+            "    Uzbekistan",
+            "    Vanuatu",
+            "    Venezuela",
+            "    Vietnam",
+            "    Virgin Islands",
+            "    Wake Island",
+            "    Wallis and Futuna",
+            "    West Bank",
+            "    Western Sahara",
+            "    Yemen",
+            "    Zambia",
+            "    Zimbabwe"});
+            this.TxtCityState.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.TxtCityState.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.TxtCityState.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtCityState.Location = new System.Drawing.Point(116, 21);
             this.TxtCityState.Multiline = true;
             this.TxtCityState.Name = "TxtCityState";
             this.TxtCityState.Size = new System.Drawing.Size(455, 38);
             this.TxtCityState.TabIndex = 1;
+            this.TxtCityState.Click += new System.EventHandler(this.TxtCityState_Click);
             this.TxtCityState.TextChanged += new System.EventHandler(this.TxtCityState_TextChanged);
             // 
             // WeatherIcon
@@ -108,15 +419,14 @@
             this.Date.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Date.FlatAppearance.BorderSize = 0;
             this.Date.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Date.ForeColor = System.Drawing.Color.Indigo;
-            this.Date.Location = new System.Drawing.Point(268, 60);
+            this.Date.Location = new System.Drawing.Point(116, 60);
             this.Date.Name = "Date";
-            this.Date.Size = new System.Drawing.Size(162, 38);
+            this.Date.Size = new System.Drawing.Size(445, 38);
             this.Date.TabIndex = 6;
             this.Date.Text = "N/A";
             this.Date.UseVisualStyleBackColor = false;
-            this.Date.Click += new System.EventHandler(this.Date_Click);
             // 
             // TxtDetails
             // 
@@ -221,117 +531,12 @@
             this.TxtTemp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TxtTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTemp.ForeColor = System.Drawing.Color.Black;
-            this.TxtTemp.Location = new System.Drawing.Point(541, 85);
+            this.TxtTemp.Location = new System.Drawing.Point(551, 85);
             this.TxtTemp.Name = "TxtTemp";
             this.TxtTemp.Size = new System.Drawing.Size(162, 38);
             this.TxtTemp.TabIndex = 13;
             this.TxtTemp.Text = "Temperature:";
             this.TxtTemp.UseVisualStyleBackColor = false;
-            // 
-            // SunsetResponse
-            // 
-            this.SunsetResponse.BackColor = System.Drawing.Color.Transparent;
-            this.SunsetResponse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.SunsetResponse.FlatAppearance.BorderSize = 0;
-            this.SunsetResponse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SunsetResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SunsetResponse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.SunsetResponse.Location = new System.Drawing.Point(638, 327);
-            this.SunsetResponse.Name = "SunsetResponse";
-            this.SunsetResponse.Size = new System.Drawing.Size(122, 38);
-            this.SunsetResponse.TabIndex = 14;
-            this.SunsetResponse.Text = "N/A";
-            this.SunsetResponse.UseVisualStyleBackColor = false;
-            // 
-            // SunriseResponse
-            // 
-            this.SunriseResponse.BackColor = System.Drawing.Color.Transparent;
-            this.SunriseResponse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.SunriseResponse.FlatAppearance.BorderSize = 0;
-            this.SunriseResponse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SunriseResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SunriseResponse.ForeColor = System.Drawing.Color.Yellow;
-            this.SunriseResponse.Location = new System.Drawing.Point(436, 326);
-            this.SunriseResponse.Name = "SunriseResponse";
-            this.SunriseResponse.Size = new System.Drawing.Size(102, 38);
-            this.SunriseResponse.TabIndex = 15;
-            this.SunriseResponse.Text = "N/A";
-            this.SunriseResponse.UseVisualStyleBackColor = false;
-            // 
-            // WindSpeedResponse
-            // 
-            this.WindSpeedResponse.BackColor = System.Drawing.Color.Transparent;
-            this.WindSpeedResponse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.WindSpeedResponse.FlatAppearance.BorderSize = 0;
-            this.WindSpeedResponse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.WindSpeedResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WindSpeedResponse.ForeColor = System.Drawing.Color.Black;
-            this.WindSpeedResponse.Location = new System.Drawing.Point(201, 399);
-            this.WindSpeedResponse.Name = "WindSpeedResponse";
-            this.WindSpeedResponse.Size = new System.Drawing.Size(97, 38);
-            this.WindSpeedResponse.TabIndex = 16;
-            this.WindSpeedResponse.Text = "N/A";
-            this.WindSpeedResponse.UseVisualStyleBackColor = false;
-            // 
-            // PressureResponse
-            // 
-            this.PressureResponse.BackColor = System.Drawing.Color.Transparent;
-            this.PressureResponse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.PressureResponse.FlatAppearance.BorderSize = 0;
-            this.PressureResponse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PressureResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PressureResponse.ForeColor = System.Drawing.Color.Black;
-            this.PressureResponse.Location = new System.Drawing.Point(598, 399);
-            this.PressureResponse.Name = "PressureResponse";
-            this.PressureResponse.Size = new System.Drawing.Size(82, 38);
-            this.PressureResponse.TabIndex = 17;
-            this.PressureResponse.Text = "N/A";
-            this.PressureResponse.UseVisualStyleBackColor = false;
-            // 
-            // TempResponse
-            // 
-            this.TempResponse.BackColor = System.Drawing.Color.Transparent;
-            this.TempResponse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.TempResponse.FlatAppearance.BorderSize = 0;
-            this.TempResponse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TempResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TempResponse.ForeColor = System.Drawing.Color.HotPink;
-            this.TempResponse.Location = new System.Drawing.Point(563, 129);
-            this.TempResponse.Name = "TempResponse";
-            this.TempResponse.Size = new System.Drawing.Size(117, 94);
-            this.TempResponse.TabIndex = 18;
-            this.TempResponse.Text = "N/A";
-            this.TempResponse.UseVisualStyleBackColor = false;
-            // 
-            // ConditionResponse
-            // 
-            this.ConditionResponse.BackColor = System.Drawing.Color.Transparent;
-            this.ConditionResponse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ConditionResponse.FlatAppearance.BorderSize = 0;
-            this.ConditionResponse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ConditionResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConditionResponse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ConditionResponse.Location = new System.Drawing.Point(237, 326);
-            this.ConditionResponse.Name = "ConditionResponse";
-            this.ConditionResponse.Size = new System.Drawing.Size(90, 38);
-            this.ConditionResponse.TabIndex = 19;
-            this.ConditionResponse.Text = "N/A";
-            this.ConditionResponse.UseVisualStyleBackColor = false;
-            // 
-            // DetailsResponse
-            // 
-            this.DetailsResponse.BackColor = System.Drawing.Color.Transparent;
-            this.DetailsResponse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.DetailsResponse.FlatAppearance.BorderSize = 0;
-            this.DetailsResponse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DetailsResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DetailsResponse.ForeColor = System.Drawing.Color.IndianRed;
-            this.DetailsResponse.Location = new System.Drawing.Point(28, 323);
-            this.DetailsResponse.Name = "DetailsResponse";
-            this.DetailsResponse.Size = new System.Drawing.Size(127, 47);
-            this.DetailsResponse.TabIndex = 20;
-            this.DetailsResponse.Text = "N/A";
-            this.DetailsResponse.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -456,6 +661,111 @@
             this.pictureBox7.TabIndex = 30;
             this.pictureBox7.TabStop = false;
             // 
+            // DetailsResponse
+            // 
+            this.DetailsResponse.BackColor = System.Drawing.Color.Transparent;
+            this.DetailsResponse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.DetailsResponse.FlatAppearance.BorderSize = 0;
+            this.DetailsResponse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DetailsResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DetailsResponse.ForeColor = System.Drawing.Color.IndianRed;
+            this.DetailsResponse.Location = new System.Drawing.Point(28, 323);
+            this.DetailsResponse.Name = "DetailsResponse";
+            this.DetailsResponse.Size = new System.Drawing.Size(127, 47);
+            this.DetailsResponse.TabIndex = 20;
+            this.DetailsResponse.Text = "N/A";
+            this.DetailsResponse.UseVisualStyleBackColor = false;
+            // 
+            // ConditionResponse
+            // 
+            this.ConditionResponse.BackColor = System.Drawing.Color.Transparent;
+            this.ConditionResponse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ConditionResponse.FlatAppearance.BorderSize = 0;
+            this.ConditionResponse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ConditionResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConditionResponse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.ConditionResponse.Location = new System.Drawing.Point(237, 326);
+            this.ConditionResponse.Name = "ConditionResponse";
+            this.ConditionResponse.Size = new System.Drawing.Size(90, 38);
+            this.ConditionResponse.TabIndex = 19;
+            this.ConditionResponse.Text = "N/A";
+            this.ConditionResponse.UseVisualStyleBackColor = false;
+            // 
+            // TempResponse
+            // 
+            this.TempResponse.BackColor = System.Drawing.Color.Transparent;
+            this.TempResponse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.TempResponse.FlatAppearance.BorderSize = 0;
+            this.TempResponse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TempResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TempResponse.ForeColor = System.Drawing.Color.HotPink;
+            this.TempResponse.Location = new System.Drawing.Point(563, 129);
+            this.TempResponse.Name = "TempResponse";
+            this.TempResponse.Size = new System.Drawing.Size(117, 94);
+            this.TempResponse.TabIndex = 18;
+            this.TempResponse.Text = "N/A";
+            this.TempResponse.UseVisualStyleBackColor = false;
+            // 
+            // PressureResponse
+            // 
+            this.PressureResponse.BackColor = System.Drawing.Color.Transparent;
+            this.PressureResponse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.PressureResponse.FlatAppearance.BorderSize = 0;
+            this.PressureResponse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PressureResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PressureResponse.ForeColor = System.Drawing.Color.Black;
+            this.PressureResponse.Location = new System.Drawing.Point(598, 399);
+            this.PressureResponse.Name = "PressureResponse";
+            this.PressureResponse.Size = new System.Drawing.Size(82, 38);
+            this.PressureResponse.TabIndex = 17;
+            this.PressureResponse.Text = "N/A";
+            this.PressureResponse.UseVisualStyleBackColor = false;
+            // 
+            // WindSpeedResponse
+            // 
+            this.WindSpeedResponse.BackColor = System.Drawing.Color.Transparent;
+            this.WindSpeedResponse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.WindSpeedResponse.FlatAppearance.BorderSize = 0;
+            this.WindSpeedResponse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.WindSpeedResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WindSpeedResponse.ForeColor = System.Drawing.Color.Black;
+            this.WindSpeedResponse.Location = new System.Drawing.Point(201, 399);
+            this.WindSpeedResponse.Name = "WindSpeedResponse";
+            this.WindSpeedResponse.Size = new System.Drawing.Size(97, 38);
+            this.WindSpeedResponse.TabIndex = 16;
+            this.WindSpeedResponse.Text = "N/A";
+            this.WindSpeedResponse.UseVisualStyleBackColor = false;
+            // 
+            // SunriseResponse
+            // 
+            this.SunriseResponse.BackColor = System.Drawing.Color.Transparent;
+            this.SunriseResponse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.SunriseResponse.FlatAppearance.BorderSize = 0;
+            this.SunriseResponse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SunriseResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SunriseResponse.ForeColor = System.Drawing.Color.Yellow;
+            this.SunriseResponse.Location = new System.Drawing.Point(436, 326);
+            this.SunriseResponse.Name = "SunriseResponse";
+            this.SunriseResponse.Size = new System.Drawing.Size(102, 38);
+            this.SunriseResponse.TabIndex = 15;
+            this.SunriseResponse.Text = "N/A";
+            this.SunriseResponse.UseVisualStyleBackColor = false;
+            // 
+            // SunsetResponse
+            // 
+            this.SunsetResponse.BackColor = System.Drawing.Color.Transparent;
+            this.SunsetResponse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.SunsetResponse.FlatAppearance.BorderSize = 0;
+            this.SunsetResponse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SunsetResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SunsetResponse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.SunsetResponse.Location = new System.Drawing.Point(638, 327);
+            this.SunsetResponse.Name = "SunsetResponse";
+            this.SunsetResponse.Size = new System.Drawing.Size(122, 38);
+            this.SunsetResponse.TabIndex = 14;
+            this.SunsetResponse.Text = "N/A";
+            this.SunsetResponse.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -518,13 +828,7 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button TxtTemp;
-        private System.Windows.Forms.Button SunsetResponse;
-        private System.Windows.Forms.Button SunriseResponse;
-        private System.Windows.Forms.Button WindSpeedResponse;
-        private System.Windows.Forms.Button PressureResponse;
-        private System.Windows.Forms.Button TempResponse;
-        private System.Windows.Forms.Button ConditionResponse;
-        private System.Windows.Forms.Button DetailsResponse;
+        private TemperatureDisplayButton TempResponse;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
@@ -535,6 +839,12 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private SunsetDisplayButton SunsetResponse;
+        private SunriseDisplayButton SunriseResponse;
+        private WindSpeedButton WindSpeedResponse;
+        private PressureDisplayButton PressureResponse;
+        private ConditionDisplayButton ConditionResponse;
+        private DetailsDisplayButton DetailsResponse;
     }
 }
 

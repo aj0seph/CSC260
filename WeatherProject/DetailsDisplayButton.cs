@@ -6,16 +6,12 @@ using System.Threading.Tasks;
 
 namespace WeatherProject
 {
-    internal class DetailsDisplayButton : WeatherDisplayButton
+    internal class DetailsDisplayButton : WeatherDisplayButton, WeatherDisplayInterface
     {
-        public DetailsDisplayButton(Form1 parent)
-            : base(parent)
-        {
-        }
 
-        public override string GetDisplayText(WeatherInfo.root[] jsonObject)
+        public void GetDisplayText(WeatherInfo.root jsonObject)
         {
-            return jsonObject.weather[0].description;
+            this.Text = jsonObject.weather[0].description;
         }
     }
 }

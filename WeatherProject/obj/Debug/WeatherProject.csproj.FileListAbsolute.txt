@@ -9,3 +9,6 @@ C:\Users\Ash\Source\Repos\aj0seph\CSC260\WeatherProject\obj\Debug\WeatherProject
 C:\Users\Ash\Source\Repos\aj0seph\CSC260\WeatherProject\obj\Debug\WeatherProject.csproj.CoreCompileInputs.cache
 C:\Users\Ash\Source\Repos\aj0seph\CSC260\WeatherProject\obj\Debug\WeatherProject.exe
 C:\Users\Ash\Source\Repos\aj0seph\CSC260\WeatherProject\obj\Debug\WeatherProject.pdb
+C:\Users\Ash\source\repos\aj0seph\CSC260\WeatherProject\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ash\source\repos\aj0seph\CSC260\WeatherProject\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ash\source\repos\aj0seph\CSC260\WeatherProject\obj\Debug\WeatherProject.csproj.CopyComplete
