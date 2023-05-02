@@ -15,6 +15,7 @@ using System.Windows.Forms.VisualStyles;
 using System.Net.NetworkInformation;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
+using System.Reflection.Emit;
 
 namespace WeatherProject
 {
@@ -28,7 +29,7 @@ namespace WeatherProject
         "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine",
         "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi",
         "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey",
-        "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio",
+        "New Mexico", "New York", "North Carolina", "North Dakota", "South Dakota", "Ohio",
         "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina",
         "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia",
         "Washington", "West Virginia", "Wisconsin", "Wyoming"
@@ -82,8 +83,7 @@ namespace WeatherProject
             this.AddNewButton(this.ConditionResponse);
             this.AddNewButton(this.DetailsResponse);
             Date_Click();
-            //TxtCityState.Text = "Enter your city or state here...";
-            SetAutoCompleteTextBox(TxtCityState);
+            //SetAutoCompleteTextBox(TxtCityState);
         }
         string APIKey = "a5b9fe29e8421e2112e56171f6371b89";
         //string APIKey = "3ca07f675106a4fe2253d8f853feb77a";
@@ -97,20 +97,10 @@ namespace WeatherProject
         //search btn
         private void button1_Click(object sender, EventArgs e)
         {
-            string state = TxtCityState.Text.ToLower();
-            string country = TxtCityState.Text.ToLower();
-            if (!validStates.Select(oneStr => oneStr.ToLower()).Contains(state)
-            && !validCountries.Select(oneStr => oneStr.ToLower()).Contains(country))
-            {
-                MessageBox.Show("Please enter a valid state or country.", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else
             {
                 getWeather();
             }
             //MessageBox.Show(TxtCityState.Text);
-
 
         }
         private void getWeather()
@@ -118,6 +108,19 @@ namespace WeatherProject
             using (WebClient web = new WebClient())
             {
                 string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}", TxtCityState.Text, APIKey);
+                if (string.IsNullOrEmpty(TxtCityState.Text))
+                {
+                    MessageBox.Show("Please enter a valid state, or country.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                string state = TxtCityState.Text.ToLower();
+                string country = TxtCityState.Text.ToLower();
+                if (!validStates.Select(oneStr => oneStr.ToLower()).Contains(state)
+                && !validCountries.Select(oneStr => oneStr.ToLower()).Contains(country))
+                {
+                    MessageBox.Show("Please enter a valid state, or country.", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 var json = web.DownloadString(url);
                 WeatherInfo.root Info = JsonConvert.DeserializeObject<WeatherInfo.root>(json);
                 WeatherIcon.ImageLocation = "https://api.openweathermap.org/img/w/" + Info.weather[0].icon + ".png";
@@ -129,25 +132,23 @@ namespace WeatherProject
             }
         }
         //not sure about this:
-        private void SetAutoCompleteTextBox(System.Windows.Forms.TextBox unusedParam)
+        /*private void SetAutoCompleteTextBox(System.Windows.Forms.TextBox unusedParam)
         {
             AutoCompleteStringCollection source = new AutoCompleteStringCollection();
             source.AddRange(new string[] { "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming" });
             TxtCityState.AutoCompleteCustomSource = source;
             TxtCityState.AutoCompleteMode = AutoCompleteMode.Suggest;
             TxtCityState.AutoCompleteSource = AutoCompleteSource.CustomSource;
-        }
+        }*/
         private void button5_Click(object sender, EventArgs e)
         {
         }
 
         private void TxtCityState_Click(object sender, EventArgs e)
-        {       //trying to achieve that greyed text in search-box?
-
-            //TxtCityState.Text = "";
-
-
-    }
+        {
+            //trying to achieve that greyed text in search-box
+                TxtCityState.Text = "";
+        }
         private void Date_Click()
         {
             string dayName = DateTime.Now.ToString("dddd");

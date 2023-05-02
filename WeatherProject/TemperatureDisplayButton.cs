@@ -18,6 +18,8 @@ namespace WeatherProject
             double kelvinTemp = jsonObject.main.temp;
             double fahrenheitTemp = (kelvinTemp - 273.15) * 1.8 + 32;
             this.Text = fahrenheitTemp.ToString();
+            this.Text = Math.Round(fahrenheitTemp, 0).ToString().Substring(0, 2) + "°";
+
         }
 
     }

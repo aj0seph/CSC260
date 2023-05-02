@@ -42,7 +42,6 @@
             this.TxtTemp = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -57,6 +56,7 @@
             this.WindSpeedResponse = new WeatherProject.WindSpeedButton();
             this.SunriseResponse = new WeatherProject.SunriseDisplayButton();
             this.SunsetResponse = new WeatherProject.SunsetDisplayButton();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.WeatherIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -73,7 +73,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.Location = new System.Drawing.Point(598, 21);
+            this.button1.Location = new System.Drawing.Point(598, 41);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(162, 38);
             this.button1.TabIndex = 0;
@@ -84,7 +84,7 @@
             // TxtCityState
             // 
             this.TxtCityState.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxtCityState.Location = new System.Drawing.Point(116, 21);
+            this.TxtCityState.Location = new System.Drawing.Point(126, 41);
             this.TxtCityState.Multiline = true;
             this.TxtCityState.Name = "TxtCityState";
             this.TxtCityState.Size = new System.Drawing.Size(455, 38);
@@ -95,9 +95,9 @@
             // 
             this.WeatherIcon.BackColor = System.Drawing.Color.Transparent;
             this.WeatherIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.WeatherIcon.Location = new System.Drawing.Point(210, 104);
+            this.WeatherIcon.Location = new System.Drawing.Point(209, 114);
             this.WeatherIcon.Name = "WeatherIcon";
-            this.WeatherIcon.Size = new System.Drawing.Size(295, 138);
+            this.WeatherIcon.Size = new System.Drawing.Size(295, 131);
             this.WeatherIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.WeatherIcon.TabIndex = 5;
             this.WeatherIcon.TabStop = false;
@@ -108,11 +108,11 @@
             this.Date.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Date.FlatAppearance.BorderSize = 0;
             this.Date.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Date.ForeColor = System.Drawing.Color.Indigo;
-            this.Date.Location = new System.Drawing.Point(116, 60);
+            this.Date.Location = new System.Drawing.Point(126, 78);
             this.Date.Name = "Date";
-            this.Date.Size = new System.Drawing.Size(445, 38);
+            this.Date.Size = new System.Drawing.Size(455, 35);
             this.Date.TabIndex = 6;
             this.Date.Text = "N/A";
             this.Date.UseVisualStyleBackColor = false;
@@ -257,22 +257,6 @@
             this.button4.Text = "atm";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.HotPink;
-            this.button5.Location = new System.Drawing.Point(649, 117);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(31, 40);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "o";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -388,9 +372,9 @@
             this.TempResponse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TempResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TempResponse.ForeColor = System.Drawing.Color.HotPink;
-            this.TempResponse.Location = new System.Drawing.Point(532, 117);
+            this.TempResponse.Location = new System.Drawing.Point(551, 119);
             this.TempResponse.Name = "TempResponse";
-            this.TempResponse.Size = new System.Drawing.Size(148, 106);
+            this.TempResponse.Size = new System.Drawing.Size(148, 91);
             this.TempResponse.TabIndex = 18;
             this.TempResponse.Text = "N/A";
             this.TempResponse.UseVisualStyleBackColor = false;
@@ -455,12 +439,28 @@
             this.SunsetResponse.Text = "N/A";
             this.SunsetResponse.UseVisualStyleBackColor = false;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(126, -1);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(455, 36);
+            this.button2.TabIndex = 31;
+            this.button2.Text = "Please type a valid state, or country:";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
@@ -468,7 +468,6 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.DetailsResponse);
@@ -520,7 +519,6 @@
         private TemperatureDisplayButton TempResponse;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -534,6 +532,7 @@
         private PressureDisplayButton PressureResponse;
         private ConditionDisplayButton ConditionResponse;
         private DetailsDisplayButton DetailsResponse;
+        private System.Windows.Forms.Button button2;
     }
 }
 
