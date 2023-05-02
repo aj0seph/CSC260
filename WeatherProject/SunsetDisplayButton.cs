@@ -13,7 +13,7 @@ namespace WeatherProject
 
         public void GetDisplayText(WeatherInfo.root jsonObject)
         {
-           this.Text = Form1.convertDateTime(jsonObject.sys.sunset).ToString("hh:mm:tt");
+           this.Text = Form1.convertDateTime(jsonObject.sys.sunset, jsonObject.timezone).ToString("hh:mm:tt");
         }
     }
     }

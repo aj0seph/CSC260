@@ -52,6 +52,7 @@ namespace WeatherProject
             public wind wind { get; set; }
 
             public sys sys { get; set; }
+            public int timezone { get; set; }
 
 
         }

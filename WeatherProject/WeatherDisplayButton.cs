@@ -11,6 +11,7 @@ namespace WeatherProject
     {
         public WeatherDisplayButton()
         {
+
         }
 
         public void Initialize(Form1 parent) 

@@ -83,65 +83,13 @@
             // 
             // TxtCityState
             // 
-            this.TxtCityState.AutoCompleteCustomSource.AddRange(new string[] {
-            "Alabama",
-            "Alaska",
-            "Arizona",
-            "Arkansas",
-            "California",
-            "    Colorado",
-            "    Connecticut",
-            "    Delaware",
-            "    Florida",
-            "    Georgia",
-            "    Hawaii",
-            "    Idaho",
-            "    Illinois",
-            "    Indiana",
-            "    Iowa",
-            "    Kansas",
-            "    Kentucky",
-            "    Louisiana",
-            "    Maine",
-            "    Maryland",
-            "    Massachusetts",
-            "    Michigan",
-            "    Minnesota",
-            "    Mississippi",
-            "    Missouri",
-            "    Montana",
-            "    Nebraska",
-            "    Nevada",
-            "    New Hampshire",
-            "    New Jersey",
-            "    New Mexico",
-            "    New York",
-            "    North Carolina",
-            "    North Dakota",
-            "    Ohio",
-            "    Oklahoma",
-            "    Oregon",
-            "    Pennsylvania",
-            "    Rhode Island",
-            "    South Carolina",
-            "    South Dakota",
-            "    Tennessee",
-            "    Texas",
-            "    Utah",
-            "    Vermont",
-            "    Virginia",
-            "    Washington",
-            "    West Virginia",
-            "    Wisconsin",
-            "    Wyoming"});
             this.TxtCityState.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtCityState.Location = new System.Drawing.Point(116, 21);
             this.TxtCityState.Multiline = true;
             this.TxtCityState.Name = "TxtCityState";
             this.TxtCityState.Size = new System.Drawing.Size(455, 38);
             this.TxtCityState.TabIndex = 1;
-            this.TxtCityState.Click += new System.EventHandler(this.TxtCityState_Click);
-            this.TxtCityState.TextChanged += new System.EventHandler(this.TxtCityState_TextChanged);
+            this.TxtCityState.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCityState_KeyPress);
             // 
             // WeatherIcon
             // 
@@ -317,9 +265,9 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.HotPink;
-            this.button5.Location = new System.Drawing.Point(655, 117);
+            this.button5.Location = new System.Drawing.Point(649, 117);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(34, 40);
+            this.button5.Size = new System.Drawing.Size(31, 40);
             this.button5.TabIndex = 23;
             this.button5.Text = "o";
             this.button5.UseVisualStyleBackColor = false;
@@ -440,9 +388,9 @@
             this.TempResponse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TempResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TempResponse.ForeColor = System.Drawing.Color.HotPink;
-            this.TempResponse.Location = new System.Drawing.Point(563, 129);
+            this.TempResponse.Location = new System.Drawing.Point(532, 117);
             this.TempResponse.Name = "TempResponse";
-            this.TempResponse.Size = new System.Drawing.Size(117, 94);
+            this.TempResponse.Size = new System.Drawing.Size(148, 106);
             this.TempResponse.TabIndex = 18;
             this.TempResponse.Text = "N/A";
             this.TempResponse.UseVisualStyleBackColor = false;
